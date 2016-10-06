@@ -17,15 +17,20 @@ public class CC_Fact_4 {
             Output[i]=fact_zero(Inputs[i]);
         }
         for(int j=0; j<No_of_inputs;j++){
-            System.out.println(Inputs[j]+"! = "+Output[j]);
+            System.out.println("# of Zeros in "+ Inputs[j]+"! = "+Output[j]);
         }
     }
     public static int fact_zero(int n){
-        int val=1;
-        int counter=0;
+        int val=0;
+        Double Zero;
         for(int i=2;i<=n;i++){
-            val=val*i;
-            System.out.println(val);
+            if(i % 5 == 0) {
+                if(i% 25 == 0 ){
+                    Zero = (Math.log(i)/Math.log(5));
+                    val=val+Zero.intValue();
+                }
+                else val=val+1;
+            }
         }
         return val;
     }
