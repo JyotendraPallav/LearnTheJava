@@ -23,15 +23,15 @@ public class CC_Fact_4 {
     }
     public static int fact_zero(int n){
         int val=0;
-        Double Zero;
+        int Zero;
         for(int i=2;i<=n;i++){
-            if(i % 5 == 0) {
-                if(i% 25 == 0 ){
-                    Zero = (Math.log(i)/Math.log(5));
-                    val=val+Zero.intValue();
-                }
-                else val=val+1;
+            Zero =i;
+            while ((Zero % 5) == 0) {
+               val += 1;
+               Zero = Zero / 5;
             }
+
+             //System.out.println("i is " + i + "and val is " + val);
         }
         return val;
     }
