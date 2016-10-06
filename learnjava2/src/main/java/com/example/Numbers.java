@@ -12,7 +12,7 @@ public class Numbers {
         int sum= 5 + 5;
         System.out.println(sum);
 
-        int module = 20 % 3;
+        int module = 2 / 3;
         System.out.println(module);
 
         Integer My_int;
